@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/wizodts/CLionProjects/APA/LAB_13/EX_01/ST.c
+ST.h
+C:/Users/wizodts/CLionProjects/APA/LAB_13/EX_01/ST.h
+
+C:/Users/wizodts/CLionProjects/APA/LAB_13/EX_01/ST.h
+stdio.h
+-
+stdlib.h
+-
+malloc.h
+-
+string.h
+-
+
+C:/Users/wizodts/CLionProjects/APA/LAB_13/EX_01/grafo.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+grafo.h
+C:/Users/wizodts/CLionProjects/APA/LAB_13/EX_01/grafo.h
+
+C:/Users/wizodts/CLionProjects/APA/LAB_13/EX_01/grafo.h
+ST.h
+C:/Users/wizodts/CLionProjects/APA/LAB_13/EX_01/ST.h
+

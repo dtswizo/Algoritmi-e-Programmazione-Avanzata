@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/wizodts/CLionProjects/APA/LAB_09/EX_03_PROVA/inv.h
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+
+C:/Users/wizodts/CLionProjects/APA/LAB_09/EX_03_PROVA/main.c
+stdio.h
+-
+stdlib.h
+-
+malloc.h
+-
+string.h
+-
+inv.h
+C:/Users/wizodts/CLionProjects/APA/LAB_09/EX_03_PROVA/inv.h
+pg.h
+C:/Users/wizodts/CLionProjects/APA/LAB_09/EX_03_PROVA/pg.h
+
+C:/Users/wizodts/CLionProjects/APA/LAB_09/EX_03_PROVA/pg.h
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+inv.h
+C:/Users/wizodts/CLionProjects/APA/LAB_09/EX_03_PROVA/inv.h
+

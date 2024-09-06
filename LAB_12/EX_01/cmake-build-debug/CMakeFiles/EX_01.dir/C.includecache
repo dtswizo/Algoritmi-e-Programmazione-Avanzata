@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/wizodts/CLionProjects/APA/LAB_12/EX_01/BST.h
+quotazioneGiornaliera.h
+C:/Users/wizodts/CLionProjects/APA/LAB_12/EX_01/quotazioneGiornaliera.h
+
+C:/Users/wizodts/CLionProjects/APA/LAB_12/EX_01/ListTitoli.h
+titolo.h
+C:/Users/wizodts/CLionProjects/APA/LAB_12/EX_01/titolo.h
+
+C:/Users/wizodts/CLionProjects/APA/LAB_12/EX_01/data.h
+
+C:/Users/wizodts/CLionProjects/APA/LAB_12/EX_01/main.c
+stdio.h
+-
+stdlib.h
+-
+ListTitoli.h
+C:/Users/wizodts/CLionProjects/APA/LAB_12/EX_01/ListTitoli.h
+string.h
+-
+BST.h
+C:/Users/wizodts/CLionProjects/APA/LAB_12/EX_01/BST.h
+quotazioneGiornaliera.h
+C:/Users/wizodts/CLionProjects/APA/LAB_12/EX_01/quotazioneGiornaliera.h
+
+C:/Users/wizodts/CLionProjects/APA/LAB_12/EX_01/ora.h
+
+C:/Users/wizodts/CLionProjects/APA/LAB_12/EX_01/quotazioneGiornaliera.h
+data.h
+C:/Users/wizodts/CLionProjects/APA/LAB_12/EX_01/data.h
+ora.h
+C:/Users/wizodts/CLionProjects/APA/LAB_12/EX_01/ora.h
+
+C:/Users/wizodts/CLionProjects/APA/LAB_12/EX_01/titolo.h
+quotazioneGiornaliera.h
+C:/Users/wizodts/CLionProjects/APA/LAB_12/EX_01/quotazioneGiornaliera.h
+BST.h
+C:/Users/wizodts/CLionProjects/APA/LAB_12/EX_01/BST.h
+

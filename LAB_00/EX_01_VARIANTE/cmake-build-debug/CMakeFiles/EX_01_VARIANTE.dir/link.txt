@@ -1,0 +1,3 @@
+"C:\Program Files\JetBrains\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\EX_01_VARIANTE.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\EX_01_VARIANTE.dir/objects.a @CMakeFiles\EX_01_VARIANTE.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe -g -Wl,--whole-archive CMakeFiles\EX_01_VARIANTE.dir/objects.a -Wl,--no-whole-archive -o EX_01_VARIANTE.exe -Wl,--out-implib,libEX_01_VARIANTE.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\EX_01_VARIANTE.dir\linklibs.rsp

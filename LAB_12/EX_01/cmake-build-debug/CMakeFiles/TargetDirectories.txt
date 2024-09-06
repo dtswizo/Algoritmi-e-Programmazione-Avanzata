@@ -1,0 +1,3 @@
+C:/Users/wizodts/CLionProjects/APA/LAB_12/EX_01/cmake-build-debug/CMakeFiles/EX_01.dir
+C:/Users/wizodts/CLionProjects/APA/LAB_12/EX_01/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/wizodts/CLionProjects/APA/LAB_12/EX_01/cmake-build-debug/CMakeFiles/rebuild_cache.dir

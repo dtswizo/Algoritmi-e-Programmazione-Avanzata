@@ -1,0 +1,147 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <malloc.h>
+
+#define filename "easy_test_set.txt"
+
+int stop=0;
+
+enum{z,r,t,s};
+
+typedef enum{
+    false,true
+}boolean;
+
+typedef struct{
+    int z,r,t,s;
+}OccorrenzePietre;
+
+
+void initVal(int **val);
+void initMark(int **mark,OccorrenzePietre entry);
+int disp_r(int pos, int *val, int *sol, int *dispGemme, int maxLun , int *bestLun, int n_dist, int count);
+void stampaPietra(int i);
+boolean check(int *sol,int pos,int *dist_val,int i);
+
+int main() {
+    setbuf(stdout, NULL);
+    FILE *fp;
+    int *val;
+    int *sol;
+    int count;
+    int *mark;
+    int nr;
+    int output=0;
+    int maxLun;
+    int bestLun=0;
+    OccorrenzePietre entry;
+    fp=fopen(filename,"r");
+    fscanf(fp,"%d",&nr);
+    for (int i = 0; i < nr; i++) {
+        fscanf(fp, "%d %d %d %d", &entry.z, &entry.r, &entry.t, &entry.s);
+        sol = (int *) malloc((entry.z + entry.r + entry.t + entry.s) * sizeof(int));
+        initVal(&val);
+        initMark(&mark, entry);
+        maxLun= entry.z + entry.r + entry.t + entry.s;
+        printf("Test #%d\n",i+1);
+        count= disp_r(0,val,sol,mark,maxLun,&bestLun,4,0);
+        printf("zaffiri: %d , rubini: %d , topazi: %d , smeraldi: %d \n",entry.z,entry.r,entry.t,entry.s);
+        printf("%d ",bestLun);
+        free(sol);
+        free(val);
+        free(mark);
+    }
+
+
+    return 0;
+}
+
+int disp_r(int pos, int *val, int *sol, int *dispGemme, int maxLun , int *bestLun, int n_dist, int count){
+    int i;
+    if(pos>=*bestLun){
+        *bestLun=pos;
+        return count+1;
+    }
+    if(pos>=maxLun)
+        return 1;
+    for(i=0 ; i<n_dist;i++){
+        if(dispGemme[i] > 0 && check(sol, pos, val, i) == true) {
+            dispGemme[i]--;
+            sol[pos] = val[i];
+            count = disp_r(pos + 1, val, sol, dispGemme, maxLun,&(*bestLun), n_dist, count);
+            if(disp_r(pos + 1, val, sol, dispGemme, maxLun,&(*bestLun), n_dist, count))
+                return 1;
+            dispGemme[i]++;
+
+        }
+    }
+    return count;
+}
+
+boolean check(int *sol,int pos,int *dist_val,int i){
+    if(pos>=1){
+        switch(sol[pos-1]){
+            case z:
+                if(dist_val[i]!=z && dist_val[i]!=r)
+                    return false;
+                else
+                    return true;
+                break;
+            case r:
+                if(dist_val[i]!=s && dist_val[i]!=t)
+                    return false;
+                else
+                    return true;
+                break;
+            case t:
+                if(dist_val[i]!=z && dist_val[i]!=r)
+                    return false;
+                else
+                    return true;
+                break;
+            case s:
+                if(dist_val[i]!=s && dist_val[i]!=t)
+                    return false;
+                else
+                    return true;
+                break;
+        }
+
+    }
+    else{
+        return true;
+    }
+}
+
+void initVal(int **val){
+    *val=(int*)malloc(4*sizeof(int));
+    (*val)[0]=0;
+    (*val)[1]=1;
+    (*val)[2]=2;
+    (*val)[3]=3;
+}
+
+void initMark(int **mark,OccorrenzePietre entry){
+    *mark=(int*)malloc(4*sizeof(int));
+    (*mark)[0]=entry.z;
+    (*mark)[1]=entry.r;
+    (*mark)[2]=entry.t;
+    (*mark)[3]=entry.s;
+}
+
+void stampaPietra(int i){
+    switch(i){
+        case z:
+            printf("Z");
+            break;
+        case r:
+            printf("R");
+            break;
+        case t:
+            printf("T");
+            break;
+        case s:
+            printf("S");
+            break;
+    }
+}
